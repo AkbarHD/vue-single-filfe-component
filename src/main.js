@@ -4,5 +4,7 @@ import {
     createApp
 } from 'vue'
 import App from './App.vue'
+import router from './router' // tdk perlu index.js 
 
-createApp(App).mount('#app')
+// dgn use router sudah jalan
+createApp(App).use(router).mount('#app')

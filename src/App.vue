@@ -1,4 +1,4 @@
-<script   >
+<!-- <script   >
 import Anjing from './components/Student.vue';
 import Teacher from './components/Teacher.vue';
 export default {
@@ -35,4 +35,46 @@ export default {
   <p>Studen yang dipilih adalah : {{ selectedStudent }}</p>
   <p>Teacher yang dipilih adalah : {{ selectedTeacher }}</p>
 </template>
+ -->
+
+  <script>
+import Navbar from './components/Navbar.vue';
+export default {
+  components: {
+      Navbar
+    }
+  }
+</script>
+
+ <template>
+  <!-- ada di src\components\Navbar.vue -->
+   <div class="menu">
+     <Navbar/>
+   </div>
+
+   <main>
+     <routerView/>
+   </main>
+ </template>
+
+
+
+<!-- berlaku global -->
+<style> 
+  body{
+    margin: 0;
+  }
+</style>
+<!-- berlaku hanya di file ini -->
+<style scoped>
+  .menu{
+    background-color: cornsilk;
+    line-height: 2.5rem;
+    padding: 10px;
+  }
+  .main{
+    padding: 10px;
+  }
+</style>
+
 
