@@ -1,6 +1,7 @@
 <template>
     <routerLink to="/">Dashboard</routerLink>
     <routerLink to="/about">About</routerLink>
+    <routerLink to="/user">User</routerLink>
 </template>
 
 <style scoped>

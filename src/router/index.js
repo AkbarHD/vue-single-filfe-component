@@ -6,6 +6,8 @@ import {
 // import views
 import DashboardView from "../views/Dashboard.vue"
 import AboutView from "../views/About.vue"
+import UserView from "../views/User.vue"
+import UserDetailView from "../views/UserDetail.vue"
 
 
 // create jalur
@@ -16,7 +18,16 @@ const routes = [{
     {
         path: '/about',
         component: AboutView
+    },
+    {
+        path: '/user',
+        component: UserView
+    },
+    {
+        path: '/user/:id',
+        component: UserDetailView
     }
+
 ]
 
 // create router 
