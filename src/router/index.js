@@ -8,6 +8,9 @@ import DashboardView from "../views/Dashboard.vue"
 import AboutView from "../views/About.vue"
 import UserView from "../views/User.vue"
 import UserDetailView from "../views/UserDetail.vue"
+import UserProfileView from "../views/UserProfile.vue"
+import UserPostView from "../views/UserPost.vue"
+import UserIndexView from "../views/UserIndex.vue"
 
 
 // create jalur
@@ -23,9 +26,35 @@ const routes = [{
         path: '/user',
         component: UserView
     },
-    {
+    // {
+    //     path: '/user/:id',
+    //     component: UserDetailView
+    // },
+    // {
+    //     path: '/user/:name/profile',
+    //     component: UserProfileView
+    // },
+    // {
+    //     path: '/user/:name/post',
+    //     component: UserPostView
+    // }
+    { // nested route
         path: '/user/:id',
-        component: UserDetailView
+        component: UserIndexView,
+        // yang childred pertama itu mengacu ke path /user/:id
+        children: [{
+                path: '',
+                component: UserDetailView
+            },
+            {
+                path: '/user/:id/posts',
+                component: UserPostView
+            },
+            {
+                path: '/user/:id/profile',
+                component: UserProfileView
+            }
+        ]
     }
 
 ]
